@@ -1,0 +1,10 @@
+services:
+    apache:
+        build:
+            context: ./docker
+        ports:
+            - 8080:80
+        volumes:
+            - ./htdocs/:/usr/local/apache2/htdocs/
+            - ./cpp/:/root/cpp/
+            - ./bash/:/root/bash/
